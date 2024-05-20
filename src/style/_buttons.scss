@@ -1,0 +1,26 @@
+.button {
+  cursor: pointer;
+  padding: 8px 16px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  color: $primary-button-color;
+  background-color: $primary-button-bgc;
+  border-radius: 40px;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #0922ff;
+  }
+
+  &--secondary {
+    color: $secondary-button-color;
+    background-color: $secondary-button-bgc;
+
+    &:hover {
+      background-color: #ff7109;
+    }
+  }
+}

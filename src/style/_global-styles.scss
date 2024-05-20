@@ -1,0 +1,31 @@
+body {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  line-height: $primary-line-height;
+
+  color: $primary-font-color;
+  background-color: $primary-light-bgc;
+
+  &.dark-mode {
+    background-color: $primary-dark-bgc;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+}
