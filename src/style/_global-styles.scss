@@ -27,5 +27,21 @@ ul {
 }
 
 button {
+  cursor: pointer;
+  padding: 0;
   border: none;
+
+  background-color: transparent;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  display: block;
+
+  fill: currentColor;
 }

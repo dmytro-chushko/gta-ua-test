@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  padding: 51px 24px 0 24px;
+
+  &__logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  &__menu-toggle {
+    padding: 7px 0 3px;
+  }
+
+  &--mobile {
+    position: static;
+
+    margin-bottom: 71px;
+  }
+}

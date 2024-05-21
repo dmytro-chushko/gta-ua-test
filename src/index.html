@@ -6,7 +6,73 @@
     <title>UG Games</title>
   </head>
   <body class="dark-mode">
-    <header>header</header>
+    <header class="header">
+      <div class="header__logo">
+        <img class="img" src="./assets/icons/logo.svg" alt="logo" />
+      </div>
+      <div class="menu-container menu-container--is-hidden">
+        <!-- MOBILE HEADER -->
+        <div class="header header--mobile">
+          <div class="header__logo">
+            <img class="img" src="./assets/icons/logo.svg" alt="logo" />
+          </div>
+          <button
+            class="header__menu-toggle"
+            type="button"
+            aria-label="Mobile menu trigger"
+          >
+            <svg class="icon" width="36" height="36">
+              <use href="./assets/icons/icon_sprite.svg#menu-toggle"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- NAVIGATION -->
+        <nav>
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Наші продукти</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Чому ми?</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Відгуки</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- LOCALIZATION -->
+        <ul class="localization">
+          <li class="localization__item localization__item--uk">English</li>
+          <li
+            class="localization__item localization__item--ua localization__item--current"
+          >
+            Український
+          </li>
+        </ul>
+        <!-- THEME TOGGLE -->
+        <ul class="theme-toggle">
+          <li class="theme-toggle__item">
+            <svg class="icon" width="24" height="24">
+              <use href="./assets//icons/icon_sprite.svg#sun"></use>
+            </svg>
+          </li>
+          <li class="theme-toggle__item theme-toggle__item--current">
+            <svg class="icon" width="24" height="24">
+              <use href="./assets//icons/icon_sprite.svg#moon"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <button
+        class="header__menu-toggle"
+        type="button"
+        aria-label="Mobile menu trigger"
+      >
+        <svg class="icon" width="36" height="36">
+          <use href="./assets/icons/icon_sprite.svg#menu-toggle"></use>
+        </svg>
+      </button>
+    </header>
     <main>
       <section class="hero">
         <div class="greeting">
@@ -25,6 +91,7 @@
             </button>
           </div>
         </div>
+        <p class="hero__forwarder">Гортайте нижче</p>
       </section>
     </main>
   </body>

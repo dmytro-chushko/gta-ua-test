@@ -1,0 +1,38 @@
+.hero {
+  padding-top: 225px;
+  padding-bottom: 46px;
+
+  background: url(./assets/images/hero-cover-mobile@1.png),
+    url(./assets//images//hero-image-mobile@1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__forwarder {
+    position: relative;
+
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -21px;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url(./assets/icons/icon_arrows-down.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      transform: translateX(-50%);
+    }
+  }
+}

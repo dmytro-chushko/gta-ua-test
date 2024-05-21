@@ -23,7 +23,7 @@ module.exports = {
     path: path.resolve(__dirname, ' dist'),
     clean: true,
     filename: 'main.[contenthash].js',
-    assetModuleFilename: 'assets/[hash ][ext]',
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
