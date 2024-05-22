@@ -70,6 +70,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|gif|jpg|jpeg|ico)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 };

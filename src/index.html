@@ -19,6 +19,7 @@
           <button
             class="header__menu-toggle"
             type="button"
+            data-menu_close
             aria-label="Mobile menu trigger"
           >
             <svg class="icon" width="36" height="36">
@@ -26,46 +27,51 @@
             </svg>
           </button>
         </div>
-        <!-- NAVIGATION -->
-        <nav>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Наші продукти</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Чому ми?</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Відгуки</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- LOCALIZATION -->
-        <ul class="localization">
-          <li class="localization__item localization__item--uk">English</li>
-          <li
-            class="localization__item localization__item--ua localization__item--current"
-          >
-            Український
-          </li>
-        </ul>
-        <!-- THEME TOGGLE -->
-        <ul class="theme-toggle">
-          <li class="theme-toggle__item">
-            <svg class="icon" width="24" height="24">
-              <use href="./assets//icons/icon_sprite.svg#sun"></use>
-            </svg>
-          </li>
-          <li class="theme-toggle__item theme-toggle__item--current">
-            <svg class="icon" width="24" height="24">
-              <use href="./assets//icons/icon_sprite.svg#moon"></use>
-            </svg>
-          </li>
-        </ul>
+        <div class="menu-container__wrapper">
+          <!-- NAVIGATION -->
+          <nav class="site-nav">
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Наші продукти</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Чому ми?</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Відгуки</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__inner-wrapper">
+            <!-- LOCALIZATION -->
+            <div class="localization">
+              <div class="localization__current-lang"></div>
+              <ul class="localization__list localization__list--hidden"></ul>
+            </div>
+
+            <!-- THEME TOGGLE -->
+            <ul class="theme-toggle">
+              <li class="theme-toggle__item" data-light_mode>
+                <svg class="icon" width="24" height="24">
+                  <use href="./assets/icons/icon_sprite.svg#sun"></use>
+                </svg>
+              </li>
+              <li
+                class="theme-toggle__item theme-toggle__item--current"
+                data-dark_mode
+              >
+                <svg class="icon" width="24" height="24">
+                  <use href="./assets/icons/icon_sprite.svg#moon"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <button
         class="header__menu-toggle"
         type="button"
+        data-menu_open
         aria-label="Mobile menu trigger"
       >
         <svg class="icon" width="36" height="36">

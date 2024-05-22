@@ -1,5 +1,9 @@
 .site-nav {
-  margin-left: 33px;
+  width: 100%;
+
+  &__list {
+    margin-left: 33px;
+  }
 
   &__item {
     &:not(:last-child) {

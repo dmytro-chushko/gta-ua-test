@@ -1,0 +1,15 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &__item {
+    padding: 9px;
+    border-radius: 10px;
+
+    &--current {
+      background-color: $current-item-bgc;
+    }
+  }
+}
