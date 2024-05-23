@@ -6,7 +6,7 @@ class ThemeToggle {
   }
 
   toggleTheme(e) {
-    const { dataset } = e.currentTarget;
+    const { dataset } = e.target.closest('li');
 
     if ('dark_mode' in dataset && !this.isDarkMode) {
       this.setDarkMode();

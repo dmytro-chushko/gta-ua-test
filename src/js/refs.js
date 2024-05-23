@@ -7,4 +7,5 @@ export default {
   currentLangBox: document.querySelector('.localization__current-lang'),
   langBtns: document.querySelectorAll('.localization__item'),
   langListBox: document.querySelector('.localization__list'),
+  themeListBox: document.querySelector('.theme-toggle'),
 };

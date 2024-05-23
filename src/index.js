@@ -22,7 +22,19 @@ import ThemeToggle from './js/theme-toggle';
   refs.menuBtns.forEach(el =>
     el.addEventListener('click', mobileMenu.toggleMenu.bind(mobileMenu)),
   );
-  refs.themeToggleBtns.forEach(el =>
-    el.addEventListener('click', themeToggle.toggleTheme.bind(themeToggle)),
+  // refs.themeToggleBtns.forEach(el =>
+  //   el.addEventListener('click', themeToggle.toggleTheme.bind(themeToggle)),
+  // );
+  refs.themeListBox.addEventListener(
+    'click',
+    themeToggle.toggleTheme.bind(themeToggle),
+  );
+  refs.currentLangBox.addEventListener(
+    'click',
+    localization.toggleLangMenu.bind(localization),
+  );
+  refs.langListBox.addEventListener(
+    'click',
+    localization.setCurrentLang.bind(localization),
   );
 })();

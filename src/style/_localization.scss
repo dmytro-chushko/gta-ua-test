@@ -27,6 +27,8 @@
     align-items: center;
     gap: 12px;
 
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &--hidden {
       opacity: 0;
       pointer-events: none;
@@ -34,15 +36,7 @@
   }
 
   &__item {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
     padding: 12px 24px;
-
-    line-height: 1.2;
 
     border: 1px solid $current-item-bgc;
     border-radius: 5px;
@@ -51,6 +45,22 @@
     background-color: $current-item-bgc;
 
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    line-height: 1.2;
+
+    color: $secondary-font-color;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent-font-color;
+      }
+    }
   }
 
   &__wrapper {

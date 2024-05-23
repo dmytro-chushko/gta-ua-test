@@ -1,11 +1,16 @@
+import flagUa from '../assets/images/flag-ua.png';
+import flagUk from '../assets/images/flag-uk.png';
+
 const languages = [
   {
     id: 'ua',
     label: 'Українська',
+    flagImg: flagUa,
   },
   {
     id: 'uk',
     label: 'English',
+    flagImg: flagUk,
   },
 ];
 
@@ -18,14 +23,12 @@ class Localization {
   }
 
   setUpLangs() {
-    console.log(this.currentLang);
-    console.dir(this.currentLangBox);
-    console.dir(this.langListBox);
-    const { id, label } = this.currentLang;
+    const { id, label, flagImg } = this.currentLang;
+
     this.currentLangBox.innerHTML = `
                 <img
                   class="img"
-                  src="./assets/images/flag-${id}.png"
+                  src="${flagImg}"
                   width="24"
                   height="24"
                   alt="${id.toUpperCase()}"
@@ -34,23 +37,34 @@ class Localization {
 
     this.langListBox.innerHTML = languages
       .filter(el => el.id !== this.currentLang.id)
-      .map(({ id, label }) => {
-        return `<li class="localization__item">
-                  <img
-                    class="img"
-                    src="./assets/images/flag-${id}.png"
-                    width="24"
-                    height="24"
-                    alt="${id.toUpperCase()}"
-                  />
-                  <span>${label}</span>
+      .map(({ id, label, flagImg }) => {
+        return `<li class="localization__item" data-lang="${id}">
+                  <button class="localization__button" type="button">
+                    <img
+                      class="img"
+                      src="${flagImg}"
+                      width="24"
+                      height="24"
+                      alt="${id.toUpperCase()}"
+                    />
+                    <span>${label}</span>
+                  </button>                  
                 </li>`;
       })
       .join('');
   }
 
   toggleLangMenu() {
-    this.langBtns;
+    this.langListBox.classList.toggle('localization__list--hidden');
+  }
+
+  setCurrentLang(e) {
+    const langId = e.target.closest('li').dataset.lang;
+
+    this.currentLang = languages.find(el => el.id === langId);
+    localStorage.setItem('lang', JSON.stringify(langId));
+    this.setUpLangs();
+    this.toggleLangMenu();
   }
 
   defineInitialLang() {

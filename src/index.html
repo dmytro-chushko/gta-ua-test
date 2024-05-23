@@ -45,24 +45,32 @@
           <div class="header__inner-wrapper">
             <!-- LOCALIZATION -->
             <div class="localization">
-              <div class="localization__current-lang"></div>
+              <button
+                class="localization__current-lang"
+                type="button"
+                aria-label="Open accessible languages"
+              ></button>
               <ul class="localization__list localization__list--hidden"></ul>
             </div>
 
             <!-- THEME TOGGLE -->
             <ul class="theme-toggle">
               <li class="theme-toggle__item" data-light_mode>
-                <svg class="icon" width="24" height="24">
-                  <use href="./assets/icons/icon_sprite.svg#sun"></use>
-                </svg>
+                <button class="theme-toggle__button" type="button">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./assets/icons/icon_sprite.svg#sun"></use>
+                  </svg>
+                </button>
               </li>
               <li
                 class="theme-toggle__item theme-toggle__item--current"
                 data-dark_mode
               >
-                <svg class="icon" width="24" height="24">
-                  <use href="./assets/icons/icon_sprite.svg#moon"></use>
-                </svg>
+                <button class="theme-toggle__button" type="button">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./assets/icons/icon_sprite.svg#moon"></use>
+                  </svg>
+                </button>
               </li>
             </ul>
           </div>
