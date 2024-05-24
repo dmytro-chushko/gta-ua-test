@@ -61,7 +61,9 @@
   &__forwarder {
     position: relative;
 
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+
     font-size: 12px;
     line-height: 1.2;
 
@@ -71,6 +73,12 @@
       padding-right: 3px;
 
       font-size: 16px;
+    }
+
+    @media (hover: hover) {
+      &:hover.hero__forwarder::before {
+        animation: pointDown 0.9s ease alternate infinite;
+      }
     }
 
     &::before {
@@ -95,6 +103,18 @@
 
         width: 24px;
         height: 24px;
+      }
+
+      @keyframes pointDown {
+        0% {
+          transform: translate(-50%, 0);
+        }
+        50% {
+          transform: translate(-50%, 10px);
+        }
+        100% {
+          transform: translateX(-50%, 0);
+        }
       }
     }
   }
