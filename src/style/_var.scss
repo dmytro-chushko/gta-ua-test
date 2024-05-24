@@ -16,3 +16,14 @@ $current-item-bgc: rgba(255, 251, 239, 0.05);
 $current-item-border: rgba(255, 251, 239, 0.15);
 $primary-button-color: #fffbef;
 $secondary-button-color: #232323;
+$btn-call-start-gradient: #ec2b1d;
+$btn-call-end-gradient: #f17d36;
+$btn-call-color: #ffffff;
+$hover-theme-btn: rgba(255, 255, 255, 0.02);
+
+// media queries
+$min-tablet: 361px;
+$max-tablet: 1199px;
+$min-laptop: 1200px;
+$max-laptop: 1513px;
+$min-hd: 1920px;

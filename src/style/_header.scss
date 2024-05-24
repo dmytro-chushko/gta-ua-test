@@ -6,25 +6,106 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 8px;
 
   padding: 51px 24px 0 24px;
+
+  @media screen and (min-width: $min-laptop) {
+    align-items: center;
+
+    padding: 24px 100px 0 100px;
+  }
 
   &__logo {
     width: 46px;
     height: 46px;
+
+    @media screen and (min-width: $min-laptop) {
+      width: 64px;
+      height: 64px;
+    }
   }
 
   &__menu-toggle {
     padding: 7px 0 3px;
+
+    @media screen and (min-width: $min-laptop) {
+      display: none;
+    }
+  }
+
+  &__button-call {
+    position: relative;
+
+    padding: 7px 14px 5px 38px;
+    margin-left: auto;
+
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    color: $btn-call-color;
+    border-radius: 8px;
+    background: linear-gradient(
+      90deg,
+      $btn-call-start-gradient 0%,
+      $btn-call-end-gradient 100%
+    );
+
+    @media screen and (max-width: $max-tablet) {
+      display: none;
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: $min-laptop) {
+      padding: 16px 25px 18px 60px;
+      margin-left: 28px;
+
+      font-size: 18px;
+      line-height: 1.2;
+
+      border-radius: 4px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 14px;
+
+      display: block;
+      width: 16px;
+      height: 16px;
+
+      background-image: url(./assets/icons/icon_call-calling.svg);
+
+      transform: translateY(-50%);
+
+      @media screen and (min-width: $min-laptop) {
+        left: 24px;
+
+        width: 24px;
+        height: 24px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 
   &--mobile {
     position: static;
 
     margin-bottom: 71px;
-  }
 
-  &__inner-wrapper {
-    margin-top: auto;
+    @media screen and (min-width: $min-laptop) {
+      display: none;
+    }
   }
 }

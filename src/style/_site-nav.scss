@@ -1,13 +1,30 @@
 .site-nav {
-  width: 100%;
+  @media screen and (max-width: $max-tablet) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $min-laptop) {
+    flex-grow: 1;
+    margin-bottom: 5px;
+  }
 
   &__list {
-    margin-left: 33px;
+    @media screen and (max-width: $max-tablet) {
+      margin-left: 33px;
+    }
+
+    @media screen and (min-width: $min-laptop) {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+    }
   }
 
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 32px;
+    @media screen and (max-width: $max-tablet) {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -19,6 +36,10 @@
     color: $secondary-font-color;
 
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $min-laptop) {
+      font-size: 16px;
+    }
 
     @media (hover: hover) {
       &:hover {

@@ -17,6 +17,12 @@
             <img class="img" src="./assets/icons/logo.svg" alt="logo" />
           </div>
           <button
+            class="header__button-call header__button-call--mobile"
+            type="button"
+          >
+            вакансії
+          </button>
+          <button
             class="header__menu-toggle"
             type="button"
             data-menu_close
@@ -42,7 +48,7 @@
               </li>
             </ul>
           </nav>
-          <div class="header__inner-wrapper">
+          <div class="menu-container__wrapper--inner">
             <!-- LOCALIZATION -->
             <div class="localization">
               <button
@@ -55,19 +61,24 @@
 
             <!-- THEME TOGGLE -->
             <ul class="theme-toggle">
-              <li class="theme-toggle__item" data-light_mode>
-                <button class="theme-toggle__button" type="button">
-                  <svg class="icon" width="24" height="24">
+              <li>
+                <button
+                  class="theme-toggle__button"
+                  type="button"
+                  data-light_mode
+                >
+                  <svg class="icon theme-toggle__icon" width="24" height="24">
                     <use href="./assets/icons/icon_sprite.svg#sun"></use>
                   </svg>
                 </button>
               </li>
-              <li
-                class="theme-toggle__item theme-toggle__item--current"
-                data-dark_mode
-              >
-                <button class="theme-toggle__button" type="button">
-                  <svg class="icon" width="24" height="24">
+              <li>
+                <button
+                  class="theme-toggle__button theme-toggle__button--current"
+                  type="button"
+                  data-dark_mode
+                >
+                  <svg class="icon theme-toggle__icon" width="24" height="24">
                     <use href="./assets/icons/icon_sprite.svg#moon"></use>
                   </svg>
                 </button>
@@ -76,6 +87,13 @@
           </div>
         </div>
       </div>
+      <button
+        class="header__button-call"
+        type="button"
+        aria-label="Contact button"
+      >
+        вакансії
+      </button>
       <button
         class="header__menu-toggle"
         type="button"

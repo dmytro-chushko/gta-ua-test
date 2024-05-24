@@ -1,7 +1,8 @@
 .button {
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 8px 15px;
 
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -10,6 +11,12 @@
   border-radius: 40px;
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $min-laptop) {
+    padding: 8px 24px;
+
+    font-size: 16px;
+  }
 
   &:hover {
     background-color: #0922ff;

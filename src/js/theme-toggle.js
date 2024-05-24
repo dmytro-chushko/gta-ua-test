@@ -6,7 +6,7 @@ class ThemeToggle {
   }
 
   toggleTheme(e) {
-    const { dataset } = e.target.closest('li');
+    const { dataset } = e.target.closest('button');
 
     if ('dark_mode' in dataset && !this.isDarkMode) {
       this.setDarkMode();
@@ -40,13 +40,13 @@ class ThemeToggle {
   }
 
   setDarkMode() {
-    this.darkModeBtn.classList.add('theme-toggle__item--current');
-    this.lightModeBtn.classList.remove('theme-toggle__item--current');
+    this.darkModeBtn.classList.add('theme-toggle__button--current');
+    this.lightModeBtn.classList.remove('theme-toggle__button--current');
   }
 
   setLightMode() {
-    this.lightModeBtn.classList.add('theme-toggle__item--current');
-    this.darkModeBtn.classList.remove('theme-toggle__item--current');
+    this.lightModeBtn.classList.add('theme-toggle__button--current');
+    this.darkModeBtn.classList.remove('theme-toggle__button--current');
   }
 }
 

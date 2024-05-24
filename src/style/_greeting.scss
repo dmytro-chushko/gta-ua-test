@@ -6,17 +6,31 @@
 
   text-align: center;
 
+  @media screen and (min-width: $min-laptop) {
+    width: 523px;
+    margin-bottom: 169px;
+    padding-left: 11px;
+  }
+
   &__intro {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     line-height: 13px;
     letter-spacing: 0.4em;
-    color: rgba(255, 251, 239, 0.6);
+    color: $secondary-font-color;
     text-transform: uppercase;
+
+    @media screen and (min-width: $min-laptop) {
+      margin-bottom: 14px;
+
+      font-size: 24px;
+      line-height: 23px;
+      letter-spacing: 0.6em;
+    }
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 
     font-family: $primary-title-font;
     font-size: 36px;
@@ -24,6 +38,13 @@
     text-transform: uppercase;
 
     color: $accent-font-color;
+
+    @media screen and (min-width: $min-laptop) {
+      margin-bottom: 24px;
+
+      font-size: 82px;
+      line-height: 78px;
+    }
   }
 
   &__content {
@@ -37,12 +58,23 @@
       color: $accent-font-color;
       text-transform: uppercase;
     }
+
+    @media screen and (min-width: $min-laptop) {
+      margin-bottom: 35px;
+
+      font-size: 14px;
+    }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
+
+    @media screen and (min-width: $min-laptop) {
+      justify-content: center;
+      gap: 12px;
+    }
   }
 }
